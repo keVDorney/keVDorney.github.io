@@ -1,0 +1,87 @@
+---
+layout: page
+title: Blender Gallery
+permalink: /BlenderGallery/
+---
+
+<head>
+    <link rel="stylesheet" type="text/css". href="/assets/css/AnimatedSlideshow.css">
+</head>
+
+Over the years, I seem to have developed a passion for illustrating the intricate world of ultrafast and strong-field light-matter interactions. This page is a compilation of my successes (or failures, depending on your own level of skill...) on this front. I've given special priority to the artwork that is available to the masses (i.e., in papers, talks, etc.), but I certainly cannot (nor would you want me to) include all attempts at making pretty pictures of light science. Hopefully, this list with help to give some inspiration and/or foundation for making your own 3D vizualiztaions using Blender!
+
+<p>P.S. The raw .blend files for all of these figures can be found here, which you are free to download and use at your leisure (within the licensing retrictions, of course ;)). Although I'm not in the business of making scientific schematics and figures for free, if you have questions about the figures, the .blend files, or the methodology used to create them, feel free to shoot me an email or open up a pull requst on the GitHub repo!</p>
+
+<!-- Creating a slideshow container... Fingers crossed...-->
+<!--Below, the class variables are defined the in linked .css file in the head section (line 7-9) -->
+<div class="slideshow-container">
+    <!--Allegedly, this creates a slide show with full-width images, caption text, and page/number counters. -->
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 10</div>
+        <img src="/images/SlideShow/LightTorque_Pulses.png" style="width:100%">
+        <div class="text">Attosecond Light Pulses with  a Time-Varying Orbital Angular Momentum</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 10</div>
+        <img src="/images/SlideShow/SAMOAMHHG_CrappyCoverArt.png" style="width:100%">
+        <div class="text">Attosecond Vortex Beams of Left and Right Circular Polarization</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 10</div>
+        <img src="/images/SlideShow/HHGSchematic_Gas_TighterFocus.png" style="width:100%">
+        <div class="text">Cartoon Showing the Creation of Attosecond Pulses via High-Harmonic Generation</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 10</div>
+        <img src="/images/SlideShow/Mantis_CuNPs_Delay_NoClors.png" style="width:100%">
+        <div class="text">Apparatus for Generating Pure, Isolated Copper Nanoparticles in Vacuum and Probing Their Photophysical Properties via Time-Resolved Photoelectron Spectroscopy</div>
+    </div>
+
+    <!-- Next and Previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+    <a class="next" onclick="plusSlides(1)">&#10095; </a>
+</div>
+<br>
+
+<!-- Adding cute little dots at the bottom -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls.
+    function currentSlide(n) {
+        showSlides(slideIndex = n)
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace( " active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
