@@ -6,6 +6,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp */
 /* Slideshow container*/
 .slideshow-container {
     max-width: 1000px;
+    max-height: 700px;
     position: relative;
     margin: auto;
 }
@@ -53,7 +54,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp */
   text-align: center;
 }
 
-.textb {
+.textk {
   color: #000000;
   font-size: 15px;
   padding: 8px 12px;
@@ -71,7 +72,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp */
   position: absolute;
   top: 0;
 }
-.numbertextb {
+.numbertextk {
   color: #000000;
   font-size: 12px;
   padding: 8px 12px;

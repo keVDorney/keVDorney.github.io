@@ -16,28 +16,75 @@ Over the years, I seem to have developed a passion for illustrating the intricat
 <!--Below, the class variables are defined the in linked .css file in the head section (line 7-9) -->
 <div class="slideshow-container">
     <!--Allegedly, this creates a slide show with full-width images, caption text, and page/number counters. -->
+
+    <!-- First slide; light torque. -->
     <div class="mySlides fade">
-        <div class="numbertext">1 / 10</div>
+        <div class="numbertextw">1 / 10</div>
         <img src="/images/SlideShow/LightTorque_Pulses.png" style="width:100%">
-        <div class="text">Attosecond Light Pulses with  a Time-Varying Orbital Angular Momentum</div>
+        <div class="textw">Attosecond Light Pulses with  a Time-Varying Orbital Angular Momentum</div>
     </div>
 
+    <!-- Second slide; SAM-OAM HHG. -->
     <div class="mySlides fade">
-        <div class="numbertext">2 / 10</div>
+        <div class="numbertextw">2 / 10</div>
         <img src="/images/SlideShow/SAMOAMHHG_CrappyCoverArt.png" style="width:100%">
-        <div class="text">Attosecond Vortex Beams of Left and Right Circular Polarization</div>
+        <div class="textw">Attosecond Vortex Beams of Left and Right Circular Polarization</div>
     </div>
 
+    <!-- Third slide; HHG Schematic. -->
     <div class="mySlides fade">
-        <div class="numbertext">3 / 10</div>
+        <div class="numbertextw">3 / 10</div>
         <img src="/images/SlideShow/HHGSchematic_Gas_TighterFocus.png" style="width:100%">
-        <div class="text">Cartoon Showing the Creation of Attosecond Pulses via High-Harmonic Generation</div>
+        <div class="textw">Cartoon Showing the Creation of Attosecond Pulses via High-Harmonic Generation</div>
     </div>
 
+    <!-- Fourth slide; Mantis scheme. -->
     <div class="mySlides fade">
-        <div class="numbertext">4 / 10</div>
+        <div class="numbertextk">4 / 10</div>
         <img src="/images/SlideShow/Mantis_CuNPs_Delay_NoClors.png" style="width:100%">
-        <div class="text">Apparatus for Generating Pure, Isolated Copper Nanoparticles in Vacuum and Probing Their Photophysical Properties via Time-Resolved Photoelectron Spectroscopy</div>
+        <div class="textk">Apparatus for Generating Pure, Isolated Copper Nanoparticles in Vacuum and Probing Their Photophysical Properties via Time-Resolved Photoelectron Spectroscopy</div>
+    </div>
+
+    <!-- Fifth slide; general CPHHG scheme. -->
+    <div class="mySlides fade">
+        <div class="numbertextw">5 / 10</div>
+        <img src="/images/SlideShow/General Experimental Scheme for CPHHG_v2.png" style="width:100%">
+        <div class="textk">"Bicircular" High-Harmonic Generation with Red and Blue Circularly Polarized Femtosecond Laser Pulses</div>
+    </div>
+
+    <!-- Sixth slide; general HHG scheme from a gas jet. -->
+    <div class="mySlides fade">
+        <div class="numbertextw">6 / 10</div>
+        <img src="/images/SlideShow/HHGScheme_GasJet_highlyReflective.png" style="width:100%">
+        <div class="textw">Generation of Attosecond Pulse Trains via High Harmonic Generation in a Gas Jet from Infrared Femtosecond Laser Pulses</div>
+    </div>
+
+    <!-- Seventh slide; modelocking schematic. -->
+    <div class="mySlides fade">
+        <div class="numbertextk">7 / 10</div>
+        <img src="/images/SlideShow/KL_ModelockingCartoon.png" style="width:100%">
+        <div class="textw">A Cartoon Illustrating the Birth of Femotsecond Laser Pulses via a Kerr Lens Modelocked Laser Oscillator</div>
+    </div>
+
+    <!-- Eighth slide; SAM-OAM HHG Setup. -->
+    <div class="mySlides fade">
+        <div class="numbertextw">8 / 10</div>
+        <img src="/images/SlideShow/SAMOAMHHG_CLEOEU2019.png" style="width:100%">
+        <div class="textw">A Bichromatic, Femtosecond Optical Vortex Laser Beamline Used to Generate High Harmonics with Tailored SAM and OAM</div>
+    </div>
+
+    <!-- Ninth slide; light torque, exp setup.. -->
+    <div class="mySlides fade">
+        <div class="numbertextw">9 / 10</div>
+        <img src="/images/SlideShow/GS_Schematic_OneColor.png" style="width:100%">
+        <div class="textw">Gerchberg-Saxton Phase Retrevial of the Complex, Spatial Amplitude of a Femtosecond Optical Vortex Beam</div>
+    </div>
+
+    <!-- Tenth slide; 3MT slide. -->
+    <div class="mySlides fade">
+        <div class="numbertextw">10 / 10</div>
+        <img src="/images/SlideShow/3MTSlide_v1.png" style="width:100%">
+        <div class="textw">Schematic of Applications of Ultrafast X-ray Light: Monitoring Chemical Reactions (left), ultrafast magnetism (center), and spin/charge/energy transport (right)</div>
     </div>
 
     <!-- Next and Previous buttons -->
@@ -52,10 +99,16 @@ Over the years, I seem to have developed a passion for illustrating the intricat
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
 </div>
 
 
-<script>
+<!--<script>
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -83,5 +136,56 @@ Over the years, I seem to have developed a passion for illustrating the intricat
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
+    }
+</script>-->
+
+<script>
+    var slideIndex = 1;
+
+    var myTimer;
+
+    window.addEventListener("load",function() {
+        showSlides(slideIndex);
+        myTimer = setInterval(function(){plusSlides(1)}, 4000);
+    })
+
+
+
+    // NEXT AND PREVIOUS CONTROL
+    function plusSlides(n){
+      clearInterval(myTimer);
+      if (n < 0){
+        showSlides(slideIndex -= 1);
+      } else {
+       showSlides(slideIndex += 1);
+      }
+      if (n === -1){
+        myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+      } else {
+        myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      }
+    }
+
+    //Controls the current slide and resets interval if needed
+    function currentSlide(n){
+      clearInterval(myTimer);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n){
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
     }
 </script>
