@@ -6,11 +6,12 @@ permalink: /BlenderGallery/
 
 <head>
     <link rel="stylesheet" type="text/css". href="/assets/css/AnimatedSlideshow.css">
+    <link rel="stylesheet" type="text/css". href="/assets/css/Accordion.css">
 </head>
 
-Over the years, I seem to have developed a passion for illustrating the intricate world of ultrafast and strong-field light-matter interactions. This page is a compilation of my successes (or failures, depending on your own level of skill...) on this front. I've given special priority to the artwork that is available to the masses (i.e., in papers, talks, etc.), but I certainly cannot (nor would you want me to) include all attempts at making pretty pictures of light science. Hopefully, this list with help to give some inspiration and/or foundation for making your own 3D vizualiztaions using Blender!
+Over the years, I seem to have developed a passion for illustrating the intricate world of ultrafast and strong-field light-matter interactions. This page is a compilation of my successes (or failures, depending on your own level of skill...) on this front. I've given special priority to the artwork that is available to the masses (i.e., in papers, talks, etc.), but I certainly cannot (nor would you want me to) include all attempts at making pretty pictures of science. Hopefully, this list with help to give some inspiration and/or foundation for making your own 3D vizualiztaions using Blender!
 
-<p>P.S. The raw .blend files for all of these figures can be found here, which you are free to download and use at your leisure (within the licensing retrictions, of course ;)). Although I'm not in the business of making scientific schematics and figures for free, if you have questions about the figures, the .blend files, or the methodology used to create them, feel free to shoot me an email or open up a pull requst on the GitHub repo!</p>
+<p>P.S. The raw .blend files for all of these figures can be found here, which you are free to download and use at your leisure (within the licensing retrictions, of course ;)). Although I'm not in the business of making scientific schematics and figures for free, if you have questions about the figures, the .blend files, or the methodology used to create them, feel free to shoot me an email!</p>
 
 <!-- Creating a slideshow container... Fingers crossed...-->
 <!--Below, the class variables are defined the in linked .css file in the head section (line 7-9) -->
@@ -41,7 +42,7 @@ Over the years, I seem to have developed a passion for illustrating the intricat
     <!-- Fourth slide; Mantis scheme. -->
     <div class="mySlides fade">
         <div class="numbertextk">4 / 10</div>
-        <img src="/images/SlideShow/Mantis_CuNPs_Delay_NoClors.png" style="width:100%">
+        <img src="/images/SlideShow/Mantis_CuNPs_Delay_w2wPulses.png" style="width:100%">
         <div class="textk">Apparatus for Generating Pure, Isolated Copper Nanoparticles in Vacuum and Probing Their Photophysical Properties via Time-Resolved Photoelectron Spectroscopy</div>
     </div>
 
@@ -107,37 +108,18 @@ Over the years, I seem to have developed a passion for illustrating the intricat
   <span class="dot" onclick="currentSlide(10)"></span>
 </div>
 
+<!--Alright, let's see if accordions are the way to go with this...-->
+<button class="accordion">The Self-Torque of Light</button>
+<div class="panel">
+    <p>The following artworks were created to support a publication in Science regarding extreme ultraviolet (EUV) light beams possessing a new property of light; self-torque. The links to the individual .blend files (and necessary dependencies) are given below each image.</p>
+    <img src="/images/SlideShow/LightTorque_Pulses.png" style="width:100%">
+</div>
 
-<!--<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls.
-    function currentSlide(n) {
-        showSlides(slideIndex = n)
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace( " active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-</script>-->
+<button class="accordion">Photoelectron Spectroscopy of Pure, Isolated Nanoparticles</button>
+<div class="panel">
+    <p>The following artworks were created to help illustrate our work on strong-field photoelectron spectroscopy of isolated nanoparticles in the gas phase. The links to the individual .blend files (and necessary dependencies) are given below each image.</p>
+    <img src="/images/SlideShow/Mantis_CuNPs_Delay_w2wPulses.png" style="width:100%">
+</div>
 
 <script>
     var slideIndex = 1;
@@ -187,5 +169,31 @@ Over the years, I seem to have developed a passion for illustrating the intricat
       }
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
+    }
+</script>
+
+<!-- <button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>-->
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
     }
 </script>

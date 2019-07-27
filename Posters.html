@@ -4,11 +4,59 @@ title: Posters
 permalink: /Posters/
 ---
 
-<!--<head>
+<head>
     <link rel="stylesheet" type="text/css". href="/assets/css/AnimatedSlideshow.css">
-</head>-->
+</head>
 
-<p>Below, you'll find links to some of the various posters that I've made over the past few years (as well as some older ones for funsies). These can be great alternatives to the much longer talks I've given, as poster tend to do a good job of keeping me succinct. A rare feat, for sure.</p>
+<p>Below, you'll find links to some of the various posters that I've made over the past few years (as well as some older ones for funsies). These can be great alternatives to the much longer talks I've given, as posters tend to do a good job of keeping me succinct. A rare feat, for sure.</p>
+
+<p>You may peruse the posters in the slideshow below, or for PDF versions you can download and view statically, please follow the links in the list below.</p>
+
+<!--Below, the class variables are defined the in linked .css file in the head section (line 7-9) -->
+<div class="slideshow-container">
+    <!--Allegedly, this creates a slide show with full-width images, caption text, and page/number counters. -->
+
+    <!-- First slide; 2018 Multiphoton Processes (Gordon Conf)-->
+    <div class="mySlides fade">
+        <!-- <div class="numbertextk">1 / 4</div> -->
+        <img src="/images/PosterCovers/Dorney_GordonMPC_PosterHead.png" style="width:100%">
+        <!--<div class="textw">Attosecond Light Pulses with  a Time-Varying Orbital Angular Momentum</div>-->
+    </div>
+
+    <!-- Second slide; Colorado Photonics Industry Association meeting. -->
+    <div class="mySlides fade">
+        <!-- <div class="numbertextk">2 / 4</div> -->
+        <img src="/images/PosterCovers/Dorney_CPIA_PosterHead.png" style="width:100%">
+        <!--<div class="textw">Attosecond Vortex Beams of Left and Right Circular Polarization</div>-->
+    </div>
+
+    <!-- Third slide; JILA Poster Fest 2015. -->
+    <div class="mySlides fade">
+        <!-- <div class="numbertextk">3 / 4</div> -->
+        <img src="/images/PosterCovers/Dorney_JILAPF2015_PosterHead.png" style="width:100%">
+        <!--<div class="textw">Attosecond Vortex Beams of Left and Right Circular Polarization</div>-->
+    </div>
+
+    <!-- Fourth slide; Trends in Particle Imaging. -->
+    <div class="mySlides fade">
+        <!-- <div class="numbertextk">4 / 4</div> -->
+        <img src="/images/PosterCovers/Dorney_TRSC2016_PosterHead.png" style="width:100%">
+        <!--<div class="textw">Attosecond Vortex Beams of Left and Right Circular Polarization</div>-->
+    </div>
+
+    <!-- Next and Previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+    <a class="next" onclick="plusSlides(1)">&#10095; </a>
+</div>
+<br>
+
+<!-- Adding cute little dots at the bottom -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
 
 <!-- Bullet list of poster files, in ascending order.-->
 <ol>
@@ -17,15 +65,17 @@ permalink: /Posters/
             <li> This poster was presented at the 2018 Multiphoton Processes Gordon Research Conference in Smithfield, Rhode Island, USA.</li>
         </ul>
     </li>
-    <li> <a href="/files/Posters/Dorney_TrendsInLaserScience.pdf"><i>Controlling quantum electrodynamics in circularly polarized high harmonic generation: bright, high-energy attosecond waveforms with tailored spectro-temporal properties</i></a>
+    <li> <a href="/files/Posters/Dorney_TrendsInLaserScience_Annotated.pdf"><i>Controlling quantum electrodynamics in circularly polarized high harmonic generation: bright, high-energy attosecond waveforms with tailored spectro-temporal properties</i></a>
         <ul style='padding-left:20px'>
             <li> This poster was presented at the 2017 Trends in Ultrafast Laser Science Conference hosted in JILA at the University of Colorado Boulder in Boulder, Colorado, USA.</li>
+            <li>*Only portions of this poster are available.</li>
         </ul>
     </li>
-    <li> <a href="/files/Posters/Dorney_CPIA.pdf"><i>Controlling quantum electrodynamics in circularly polarized high harmonic generation: bright, high-energy attosecond waveforms with tailored spectro-temporal properties</i></a>
+    <li> <a href="/files/Posters/Dorney_CPIA_Annotated.pdf"><i>Controlling quantum electrodynamics in circularly polarized high harmonic generation: bright, high-energy attosecond waveforms with tailored spectro-temporal properties</i></a>
         <ul style='padding-left:20px'>
             <li> This poster was presented at the 2017 Colorado Photonics Industry Association Meeting hosted at the University of Colorado Boulder in Boulder, Colorado, USA.</li>
             <li> This poster was selected for a Best Poster Award by the CPIA selection committee.</li>
+            <li>*Only portions of this poster are available.</li>
         </ul>
     </li>
     <li> <a href="/files/Posters/Dorney_TSRC2016.pdf"><i>Imaging and controlling electron rescattering dynamics in bicircular femtosecond laser fields</i></a>
@@ -59,3 +109,55 @@ permalink: /Posters/
         </ul>
     </li>
 </ol>
+
+<!--Java script so that the slideshow plays automatically, and resets the counter between slides if the user clicks on the arrows or dots-->
+<script>
+    var slideIndex = 1;
+
+    var myTimer;
+
+    window.addEventListener("load",function() {
+        showSlides(slideIndex);
+        myTimer = setInterval(function(){plusSlides(1)}, 4000);
+    })
+
+
+
+    // NEXT AND PREVIOUS CONTROL
+    function plusSlides(n){
+      clearInterval(myTimer);
+      if (n < 0){
+        showSlides(slideIndex -= 1);
+      } else {
+       showSlides(slideIndex += 1);
+      }
+      if (n === -1){
+        myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+      } else {
+        myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      }
+    }
+
+    //Controls the current slide and resets interval if needed
+    function currentSlide(n){
+      clearInterval(myTimer);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n){
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+</script>
