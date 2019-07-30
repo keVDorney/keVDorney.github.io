@@ -29,12 +29,12 @@ Despite being a former biologist, and apparently a former chemist, Kevin continu
 
 
 ### The Super-Fast Winding and Twisting Road Ahead
-<div class="box">
+<!--<div class="box">
   <p>
   Apparently I should put some profound shit in this box, yea?
   </p>
-</div>
+</div>-->
 
-So that, friends is where the academic and career oriented sidewalk ends... For now ;). Although he is officially in 'Alice Cooper' mode (i.e., no more pencils, no more books), Kevin enjoys pushing the boundaries of optical physics and creating new light sources to observe nature's fastest and most intricate processes. Although he has yet to attach a laser to a shark's head, he is confident that this silly little webpage will provide the springboard to help him realize this goal...
+<span class="image left"><img src="{{ "/images/Kev_IronMan.jpg" | absolute_url }}" alt="" /></span>
 
-Obviously, you need something better jackass...
+So that, friends is where the academic and career oriented sidewalk ends... For now ;). Since finishing his PhD, Kevin continues to enjoy pushing the boundaries of optical physics and creating new light sources to observe nature's fastest and most intricate processes. Currently, his academic interests are focused on applying uniquely structured, coherent beams of EUV light to condensed matter, nanoscale systems in order to fully resolve (i.e., spectrally, temporally, and spatially) the complex dynamics that make up many of the devices and the world around us. When not in the lab, Kevin enjoys anything that can help curb his addiction to the outdoors, which at present includes the following  &quot;distractions&quot;; running, hiking, swimming, backpacking, mountain biking, camping, cooking, and the occasional triathlon (although he admits he probably doesn't like this one very much).
