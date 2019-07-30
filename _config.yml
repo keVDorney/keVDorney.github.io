@@ -4,7 +4,7 @@ email: kevin.dorney@colorado.edu
 description: "DESCRITPION"
 locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/keVDorney/keVDorney.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://github.com/keVDorney/keVDorney.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: None
 github_username:  keVDorney
 
@@ -26,7 +26,7 @@ email: kevin.dorney@colorado.edu
 # Other
 background_image:   /images/LoneEaglePeak.jpg
 
-# Tip: The color palette and other styles can be configured in /_sass/lib/_vars.scss
+# Hint: The color palette and other styles can be configured in /_sass/lib/_vars.scss
 slapform_thankyou_page: /thank-you
 
 defaults:
@@ -69,5 +69,3 @@ jekyll-mentions:
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
-
-theme: jekyll-theme-leap-day
