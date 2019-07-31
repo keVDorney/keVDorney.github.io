@@ -1,11 +1,7 @@
 ---
 layout: page
-title: All About Kev
-description: A few little tidbits and random ramblings about Kevin Dorney.
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
+title: About
+permalink: /About/
 ---
 ## Allow Me to Introduce... Me
 
