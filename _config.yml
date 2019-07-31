@@ -3,7 +3,7 @@ title: Kevin M. Dorney
 email: kevin.dorney@colorado.edu
 description: "DESCRITPION"
 locale: en_US
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/keVDorney.github.io" # the subpath of your site, e.g. /blog
 url: "https://github.com/keVDorney/keVDorney.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: None
 github_username:  keVDorney
