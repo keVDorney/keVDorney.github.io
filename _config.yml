@@ -54,7 +54,7 @@ sass:
   style:            compressed
 
 # Gems
-gems:
+plug-ins: # Changed from "gems" on 20200107
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
