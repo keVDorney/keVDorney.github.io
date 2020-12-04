@@ -7,7 +7,7 @@ permalink: /About/
 
 <span class="image left"><img src="{{ "/images/KevinSandandStuff.jpg" | absolute_url }}" alt="" /></span>
 
-Even the most modest webpages need to have an "About this thing that's on the web" section, and this site is no different. In the following, we'll operate in the third-person prose, but rest assured, this is not how Kevin talks about himself in real life. Most of the time...
+Even the most modest webpage needs to have an "About this thing that's on the web" section, and this site is no different. In the following, we'll operate in the third-person prose, but rest assured, this is not how Kevin talks about himself in real life. Most of the time...
 
 ### The early days
 
